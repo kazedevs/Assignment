@@ -1,0 +1,39 @@
+
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Ailog {
+  id String @id @default(uuid())
+  module String 
+  prompt String
+  resonse String
+  createdAt DateTime @default(now())
+}
+
+model ProductCategorisatiion {
+  id String @id @default(uuid())
+  title String
+  description String
+  category String
+  subcategory String
+  sustainability String
+  aiResponse Json
+  seoTags String[]
+  createdAt DateTime @default(now())
+}
+
+model Proposal {
+  id String @id @default(uuid())
+  budget Int
+  useCase String
+  companySize Int
+  proposalData Json
+  createdAt DateTime @default(now())
+}
