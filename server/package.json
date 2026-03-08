@@ -1,8 +1,13 @@
 {
   "name": "server",
-  "module": "index.ts",
+  "module": "server.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "dev": "bun --watch src/server.ts",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev"
+  },
   "devDependencies": {
     "@types/bun": "latest",
     "@types/pg": "^8.18.0",
@@ -12,6 +17,7 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "@openrouter/sdk": "^0.9.11",
     "@prisma/adapter-pg": "^7.4.2",
     "@prisma/client": "^7.4.2",
     "@types/cors": "^2.8.19",
