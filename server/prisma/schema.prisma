@@ -32,6 +32,7 @@ model Proposal {
   budget       Int
   useCase      String
   companySize  Int
+  impactSummary String
   proposalData Json
   createdAt    DateTime @default(now())
 }

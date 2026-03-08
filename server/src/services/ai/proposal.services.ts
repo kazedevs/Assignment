@@ -57,6 +57,7 @@ Company Size: ${companySize}
               budget,
               useCase,
               companySize,
+              impactSummary: parsed.impact_summary,
               proposalData: parsed
           }
      });
